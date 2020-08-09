@@ -14,20 +14,6 @@ tf.test.is_gpu_available()
 # 或是版本比較低的tensorflow :
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
-
-開啟jupyter 並新建檔案
-
-import tensorflow as tf
-hello = tf.constant("Hello, TensorFlow!")
-sess = tf.Session()
-print(sess.run(hello))
-
-有出現結果就是安裝好了
-
-
-把np.dtype([("quint8", np.uint8, 1)])修改?np.dtype([("quint8", np.uint8, (1,))])
-
-
 conda create –n NLP_course python=3.6
 # NLP_course 是你的環境名稱
 # python=X.X 是指定環境python版本，一般來說3.6 3.7
@@ -41,12 +27,6 @@ conda env list
 # 退出環境
 conda deactivate
 
-conda install python=3.6
-
-conda install tensorflow
-
-conda install -c conda-forge keras
-
 conda --version 檢視 conda 版本
 conda update PACKAGE_NAME更新指定套件
 conda --help 檢視 conda 指令說明文件
@@ -58,3 +38,22 @@ conda activate ENVIRONMENT 切換至指定工作環境
 conda deactivate 回到 base 工作環境
 conda env export --name ENVIRONMENT --file ENVIRONMENT.yml 將指定工作環境之設定匯出為 .yml 檔藉此複製且重現工作環境
 conda remove --name ENVIRONMENT --all 移除指定工作環境
+
+
+
+
+
+conda install python=3.6
+
+pip install --ignore-installed --upgrade tensorflow==1.6.0
+pip install keras==2.1.5
+
+
+開啟jupyter 並新建檔案
+
+import tensorflow as tf
+hello = tf.constant("Hello, TensorFlow!")
+sess = tf.Session()
+print(sess.run(hello))
+
+有出現結果就是安裝好了
