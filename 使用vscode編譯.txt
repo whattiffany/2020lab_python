@@ -1,0 +1,21 @@
+在vscode左側套件安裝: Anaconda Extension Pack
+
+畫面左下角可以選擇conda的環境
+
+ctrl + F5 執行程式
+(若出現CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+進入windows PowerShell（管理员）,輸入 set-ExecutionPolicy RemoteSigned，
+接著輸入Y，結束後回到vs powershell comdline輸入conda init，完成後重啟 vscode)
+
+
+*使用jupyter一樣的cell的形式執行交互式腳本
+
+- 使用 `ctrl+ shift+ p` 調出 **Command Palette** 然後輸入 `Python: Switch`
+
+- 選擇第二個 **Python: Switch to Insiders Daily Channel**
+
+>> 重啟vscode
+
+- 方法一: 使用 `ctrl + shift + p` 輸入 `Python: Create New Blank Jupyter Notebook`
+
+- 方法二: 直接左上角新建文件, 然後 `ctrl + s` 保存為 `.ipynb` 格式即可、
